@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of Cyber-Crime</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="cyber-crime.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="./imgg/footprint.png" alt="Grace the Detective Logo">
+                Grace the Detective
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="midterm.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="detective.html">Grace the Detective</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="cyberCrimeDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Cyber Crime
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="cyberCrimeDropdown">
+                            <li><a class="dropdown-item" href="cyber-crime.html">Types of Cyber Crime</a></li>
+                            <li><a class="dropdown-item" href="criminals.html">Lists of Criminals</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="protection.html">Protect & Be Aware</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="case-studies.html">Case Studies</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#"
+                            id="OthersDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Others
+                        </a>
+                        <ul class="dropdown-menu"
+                            aria-labelledby="OthersDropdown">
+                            <li>
+                                <a class="dropdown-item" href="contact.html">Contact Us</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="Register.html">Register</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="login.html">Login</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/checkforgot">Forgot Password</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="/logout" class="btn btn-danger ms-3">Logout</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <br>
+        <h1 class="text-center mt-4"><strong>🫧 Types of Cyber-Crime Crossword 🎱</strong></h1>
+        <br>
+        <div class="row">
+            <div class="col-md-7">
+                <div class="crossword-container">
+                    <div class="crossword-grid" id="crosswordGrid"></div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <!-- <img src="./imgg/jarvis.jpeg" alt="Cybercrime Hint" class="hint-image"> -->
+                <br><br><br>
+                <br><br>
+                <div class="word-list">
+                    <h3>Find these words:</h3>
+                    <ul id="wordList"></ul>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="media-section">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="media-item" style="margin-top: 50px;">
+                        <h3>Learn about Phishing 🎣</h3>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Y7zNlEMDmI4?si=W5jq2-eDIG6E_Hx2" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="media-item">
+                        <h3>Malware Types</h3>
+                        <img class="img-fluid" src="./imgg/malware.webp" alt="Malware Types Infographic">
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6" style="margin-top: -250px;">
+                    <div class="media-item">
+                        <h3>Ransomware Explained</h3>
+                        <img class="img-fluid" src="./imgg/ransomware.png" alt="Ransomware Infographic">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="media-item">
+                        <h3>DDoS Attack Simulation 💣</h3>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/r3bEjsv9JFw?si=_GQBgyQsbLm-3ogh" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="crime-info" id="crimeInfo">
+            <h2><strong>Types of Cyber-Crime 👩🏻‍💻</strong></h2>
+            <br>
+            <!-- Information about each cybercrime type will be dynamically added here -->
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const words = [
+            'PHISHING', 'MALWARE', 'RANSOMWARE', 'DDOS', 'IDENTITYTHEFT',
+            'HACKING', 'CYBERSTALKING', 'FRAUD', 'CYBERESPIONAGE'
+        ];
+
+        const crimeInfo = {
+            'PHISHING': 'Phishing is a cybercrime where attackers send fraudulent messages to trick individuals into revealing sensitive information.',
+            'MALWARE': 'Malware is malicious software designed to disrupt, damage, or gain unauthorized access to a computer system.',
+            'RANSOMWARE': 'Ransomware is a type of malware that encrypts files and demands a ransom for decryption.',
+            'DDOS': 'DDoS (Distributed Denial of Service) attacks aim to overwhelm a system or network, making it unavailable to users.',
+            'IDENTITYTHEFT': 'Identity theft involves stealing personal information to commit fraud or other crimes in the victim\'s name.',
+            'HACKING': 'Hacking is the unauthorized intrusion into a computer system or network.',
+            'CYBERSTALKING': 'Cyberstalking is the use of electronic communications to harass or intimidate a person or group.',
+            'FRAUD': 'Online fraud involves deception for financial or personal gain through digital means.',
+            'CYBERESPIONAGE': 'Cyberespionage is the use of computer networks to gain illicit access to confidential information.'
+        };
+
+        function generateCrossword() {
+            const grid = $('#crosswordGrid');
+            const wordList = $('#wordList');
+            const crimeInfoSection = $('#crimeInfo');
+
+            // Create grid
+            for (let i = 0; i < 225; i++) {
+                grid.append($('<div>').addClass('crossword-cell').attr('data-index', i));
+            }
+
+            // Place words
+            words.forEach(word => {
+                placeWord(word);
+                wordList.append($('<li>').text(word).attr('data-word', word));
+                crimeInfoSection.append($('<div>').html(`<h3>${word}</h3><p>${crimeInfo[word]}</p>`));
+            });
+
+            // Fill empty cells
+            $('.crossword-cell:empty').each(function () {
+                $(this).text(String.fromCharCode(65 + Math.floor(Math.random() * 26)));
+            });
+        }
+
+        function placeWord(word) {
+            const directions = [
+                [1, 0], [0, 1], [1, 1], [-1, 1],
+                [-1, 0], [0, -1], [-1, -1], [1, -1]
+            ];
+            let placed = false;
+
+            while (!placed) {
+                const startX = Math.floor(Math.random() * 15);
+                const startY = Math.floor(Math.random() * 15);
+                const direction = directions[Math.floor(Math.random() * directions.length)];
+
+                if (canPlaceWord(word, startX, startY, direction)) {
+                    placeWordAt(word, startX, startY, direction);
+                    placed = true;
+                }
+            }
+        }
+
+        function canPlaceWord(word, startX, startY, direction) {
+            for (let i = 0; i < word.length; i++) {
+                const x = startX + i * direction[0];
+                const y = startY + i * direction[1];
+                if (x < 0 || x >= 15 || y < 0 || y >= 15) return false;
+                const cell = $(`.crossword-cell[data-index="${y * 15 + x}"]`);
+                if (cell.text() !== '' && cell.text() !== word[i]) return false;
+            }
+            return true;
+        }
+
+        function placeWordAt(word, startX, startY, direction) {
+            for (let i = 0; i < word.length; i++) {
+                const x = startX + i * direction[0];
+                const y = startY + i * direction[1];
+                const cell = $(`.crossword-cell[data-index="${y * 15 + x}"]`);
+                cell.text(word[i]).attr('data-word', word);
+            }
+        }
+
+        let selectedCells = [];
+
+        $(document).ready(function () {
+            generateCrossword();
+
+            $('.crossword-cell').on('mousedown', function () {
+                selectedCells = [$(this)];
+                $(this).addClass('highlighted');
+            });
+
+            $('.crossword-cell').on('mouseover', function () {
+                if (selectedCells.length > 0) {
+                    $(this).addClass('highlighted');
+                    selectedCells.push($(this));
+                }
+            });
+
+            $(document).on('mouseup', function () {
+                if (selectedCells.length > 0) {
+                    const selectedWord = selectedCells.map(cell => cell.text()).join('');
+                    const reversedWord = selectedWord.split('').reverse().join('');
+
+                    if (words.includes(selectedWord) || words.includes(reversedWord)) {
+                        $(`#wordList li[data-word="${selectedWord}"]`).addClass('found');
+                        selectedCells.forEach(cell => cell.addClass('found'));
+                    }
+
+                    selectedCells.forEach(cell => cell.removeClass('highlighted'));
+                    selectedCells = [];
+                }
+            });
+        });
+    </script>
+    <footer class="text-center">
+        <div class="container">
+            <p>&copy; 2024 Grace the Detective. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,192 @@
+/* contact css */
+
+body {
+    background-color: #f5e6d3;
+    color: #4a3728;
+    font-family: "Courier New", monospace;
+}
+.navbar {
+    font-family: "Courier New", monospace;
+    background-color: #6b240c;
+    padding: 10px 0;
+}
+.navbar-brand,
+.nav-link {
+    color: #e9ab0d !important;
+    transition: all 0.3s ease;
+}
+.nav-link:hover,
+.navbar-brand:hover {
+    color: #1c294c !important;
+    background-color: #e9ab0d;
+}
+.nav-item {
+    margin-right: 10px;
+    font-size: 14px;
+}
+.dropdown-menu {
+    background-color: #1c294c;
+}
+.dropdown-item {
+    color: #e9ab0d;
+}
+.dropdown-item:hover {
+    background-color: #e9ab0d;
+    color: #1c294c;
+}
+.navbar-brand img {
+    height: 40px;
+    margin-right: 10px;
+}
+.mystery-header {
+    font-family: "Courier New", monospace;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #8b4513;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.calendar {
+    background-color: #fff;
+    border: 2px solid #8b4513;
+    padding: 20px;
+    margin-top: 130px;
+    border-radius: 10px;
+}
+.calendar th,
+.calendar td {
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+}
+.calendar th {
+    background-color: #8b4513;
+    color: #f5e6d3;
+}
+.calendar td {
+    border: 1px solid #8b4513;
+}
+.busy {
+    background-color: #dc3545;
+    color: #fff;
+}
+.detective-kit {
+    background-color: #d2b48c;
+    border: 2px solid #8b4513;
+    padding: 20px;
+    border-radius: 10px;
+}
+.btn-primary {
+    background-color: #8b4513;
+    border-color: #8b4513;
+}
+.btn-primary:hover {
+    background-color: #6b3611;
+    border-color: #6b3611;
+}
+.carousel-item img {
+    max-height: 300px;
+    object-fit: cover;
+}
+.evidence-board {
+    background-image: url("https://example.com/corkboard-texture.jpg");
+    padding: 20px;
+    border-radius: 10px;
+}
+.evidence-note {
+    background-color: #fefacd;
+    padding: 10px;
+    margin-bottom: 10px;
+    transform: rotate(-2deg);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.contact-form-wrapper {
+    position: relative;
+    max-width: 450px;
+    margin: 0 auto;
+}
+.contact-form-background {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: -20px;
+    bottom: -20px;
+    background-color: rgba(245, 230, 211, 0.5);
+    border: 2px solid rgba(139, 69, 19, 0.3);
+    border-radius: 15px;
+    transform: rotate(2deg);
+    z-index: -1;
+}
+.contact-form {
+    background-color: #f5e6d3;
+    border: 2px solid #8b4513;
+    border-radius: 15px;
+    padding: 20px;
+    font-family: "Courier New", monospace;
+    transform: rotate(-2deg);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+.contact-form::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="10" y="30" font-family="Arial" font-size="10" fill="rgba(139, 69, 19, 0.1)" transform="rotate(-45 50 50)">DETECTIVE AGENCY</text></svg>');
+    background-repeat: repeat;
+    opacity: 0.5;
+    z-index: -1;
+}
+.contact-form h2 {
+    font-family: "Times New Roman", serif;
+    color: #8b4513;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+.form-label {
+    font-weight: bold;
+    color: #4a3728;
+}
+.form-control {
+    background-color: #fff;
+    border: 1px solid #8b4513;
+    border-radius: 0;
+}
+.reason-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%238b4513' viewBox='0 0 16 16'%3E%3Cpath d='M8 12L1 5h14l-7 7z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px;
+}
+.ticket-stamp {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #B8001F;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #B8001F;
+    transform: rotate(15deg);
+    font-size: 12px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+}
+footer {
+    text-align: center;
+    background-color: #6b240c;
+    color: #e9ab0d;
+    padding: 20px 0;
+    margin-top: auto;
+}

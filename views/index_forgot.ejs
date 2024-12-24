@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html oncontextmenu="return false">
+
+<head>
+    <style>
+        body.bgGray0 {
+            background-color: #111;
+            color: #FF0080;
+            font-family: 'VT323', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .midDiv {
+            padding: 20px;
+            border: 2px solid #FF0080;
+            background-color: #000;
+            border-radius: 10px;
+            width: 100%; 
+            max-width: 400px; 
+        }
+
+        h1.ssh1, h4.ssh4 {
+            color: #FF0080;
+        }
+
+        .fieldbox {
+            border: 2px solid #FF0080;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .fieldbox legend {
+            color: #FF0080;
+            font-size: 24px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #FF0080;
+            background-color: #000;
+            color: #FF0080;
+            font-family: 'VT323', monospace;
+            font-size: 20px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .btn_Main {
+            background-color: #FF0080;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            font-family: 'VT323', monospace;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn_Second {
+            background-color: transparent;
+            color: #FF0080;
+            border: 2px solid #FF0080;
+            padding: 10px 20px;
+            font-size: 20px;
+            font-family: 'VT323', monospace;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .f400 {
+            color: red;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body class="bgGray0">
+    <div class="container-fluid">
+        <div class="row minH100">
+            <div class="col-lg-6">
+                <div class="midDiv padP5 txtCenter">
+                    <h1 class="txtLeft ssh1">Grace the Detective🕵️‍♀️</h1>
+
+                    <form action="/checkforgot" method="post" <%=vhf1%>>
+                        <fieldset class="txtLeft fieldbox">
+                            <legend>FORGOT password?</legend>
+                            <small style="color: #FF0080; display: block; margin-bottom: 16px;">Member? Input your code</small>
+                            รหัสผู้ใช้ (User Name)
+                            <input name="username" type="text" class="block100p br2 marb8" value="<%=user_name%>" required>
+                            <% if (message) { %>
+                                <span class="f400"><i class="fas fa-exclamation-circle"></i> <%- message %></span>
+                            <% } %>
+                            <br>
+                            <button type="submit" class="btn_Main">Submit</button>
+
+                            <a href="/checklogin" class="btn_Second">Back to LOGIN</a>
+                        </fieldset>
+                    </form>
+
+                    <div <%=vhf2%>>
+                        <fieldset>
+                            <legend>FORGOT password?</legend>
+                            <p class="txtCenter"><%- message %></p>
+                            <br>
+                            <a href="/checklogin" class="btn_Second">Back to LOGIN</a>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

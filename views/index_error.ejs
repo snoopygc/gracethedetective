@@ -1,0 +1,110 @@
+<% var user_id, user_data, message, vhf1, vhf2 %>
+
+<!DOCTYPE html>
+<html oncontextmenu="return false">
+<head>
+    <style>
+        body.bgGray0 {
+            background-color: #111;
+            color: #F90716; 
+            font-family: 'VT323', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            margin: 0;
+        }
+
+        .midDiv {
+            padding: 20px;
+            border: 2px solid #F90716;
+            background-color: #000;
+            border-radius: 10px;
+            width: 100%; 
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h1.ssh1, h4.ssh4 {
+            color: #F90716;
+        }
+
+        .fieldbox {
+            border: 2px solid #F90716;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #222;
+        }
+
+        .fieldbox legend {
+            color: #F90716;
+            font-size: 24px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #F90716;
+            background-color: #000;
+            color: #F90716;
+            font-family: 'VT323', monospace;
+            font-size: 20px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .btn_Main {
+            background-color: #F90716;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            font-family: 'VT323', monospace;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn_Second {
+            background-color: transparent;
+            color: #F90716;
+            border: 2px solid #F90716;
+            padding: 10px 20px;
+            font-size: 20px;
+            font-family: 'VT323', monospace;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .f400 {
+            color: red;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body class="bgGray0">
+    <div class="container-fluid">
+        <div class="row minH100">
+            <div class="col-lg-6">
+                <div class="midDiv padP5 txtCenter">
+                    <h1 class="txtLeft ssh1" style="color: #F90716;">Grace the Detective🕵️‍♀️</h1>
+                    <h4 class="txtLeft ssh4" style="color: #F90716;">TEMPORARY</h4>
+
+                    <div>
+                        <fieldset class="txtLeft fieldbox">
+                            <legend><%= user_id %></legend>
+                            <p class="txtCenter"><%= message %></p>
+                            <br>
+                            <a href="/checklogin" class="btn_Second br50 block100p marb15">LOGINeiei</a>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

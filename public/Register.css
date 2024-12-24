@@ -1,0 +1,76 @@
+/* Register css */
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #e9ab0d;
+    display: flex;
+    flex-direction: column;
+}
+.navbar {
+    background-color: #1c294c;
+}
+.navbar-brand, .nav-link {
+    color: #e9ab0d !important;
+    transition: all 0.3s ease;
+}
+.nav-link:hover, .navbar-brand:hover {
+    color: #1c294c !important;
+    background-color: #e9ab0d;
+}
+.nav-item {
+    margin-right: 10px;
+}
+.dropdown-menu {
+    background-color: #1c294c;
+}
+.dropdown-item {
+    color: #e9ab0d;
+}
+.dropdown-item:hover {
+    background-color: #e9ab0d;
+    color: #1c294c;
+}
+.navbar-brand img {
+    height: 40px;
+    margin-right: 10px;
+}
+.container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 50px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 600px; /* Adjust this value to control the overall width */
+}
+.main-content {
+    flex: 1 0 auto;
+}
+h2 {
+    color: #6B240C;
+    font-size: 1.8rem; /* Slightly smaller heading */
+}
+.btn-primary {
+    background-color: #1c294c;
+    border-color: #1c294c;
+}
+.btn-primary:hover {
+    background-color: #151f3d;
+    border-color: #151f3d;
+}
+.form-control.is-invalid {
+    border-color: #dc3545;
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+.form-label {
+    font-size: 0.9rem; /* Slightly smaller labels */
+}
+.form-control, .form-select {
+    font-size: 0.9rem; /* Slightly smaller input text */
+}
+.btn {
+    font-size: 0.9rem; /* Slightly smaller button text */
+}

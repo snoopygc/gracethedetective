@@ -1,0 +1,102 @@
+/* criminals css */
+
+body {
+    background-color: #543310;
+    font-family: 'Courier New', monospace;
+    color: #4A2511;
+}
+.navbar {
+    font-family: 'Courier New', monospace;
+    background-color: #6B240C;
+}
+.navbar-brand,
+.nav-link {
+    color: #e9ab0d !important;
+    transition: all 0.3s ease;
+}
+.nav-link:hover,
+.navbar-brand:hover {
+    color: #1c294c !important;
+    background-color: #e9ab0d;
+}
+.nav-item {
+    margin-right: 10px;
+    font-size: 14px;
+}
+.dropdown-menu {
+    background-color: #1c294c;
+}
+.dropdown-item {
+    color: #e9ab0d;
+}
+.dropdown-item:hover {
+    background-color: #e9ab0d;
+    color: #1c294c;
+}
+.navbar-brand img {
+    height: 40px;
+    margin-right: 10px;
+}
+.board {
+    background-color: #D2B48C;
+    border: 15px solid #8B4513;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    position: relative;
+}
+.criminal-card {
+    background-color: #F4E9D9;
+    border: 1px solid #A0522D;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+    position: relative;
+}
+.criminal-card:hover {
+    transform: scale(1.02);
+    z-index: 10;
+}
+.criminal-name {
+    font-weight: bold;
+    color: #8B4513;
+    border-bottom: 2px solid #A0522D;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.case-title {
+    font-weight: bold;
+    color: #A0522D;
+}
+.case-details {
+    font-size: 0.9em;
+    color: #4A2511;
+}
+h1 {
+    color: #F4E9D9;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}
+.pin {
+    width: 10px;
+    height: 10px;
+    background-color: #FF0000;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+.connection-line {
+    position: absolute;
+    border: none;
+    border-top: 2px solid #FF0000;
+    transform-origin: 0 0;
+    z-index: 1;
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists of Criminals</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="criminals.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="./imgg/footprint.png" alt="Grace the Detective Logo">
+                Grace the Detective
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="midterm.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="detective.html">Grace the Detective</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="cyberCrimeDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Cyber Crime
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="cyberCrimeDropdown">
+                            <li><a class="dropdown-item" href="cyber-crime.html">Types of Cyber Crime</a></li>
+                            <li><a class="dropdown-item" href="criminals.html">Lists of Criminals</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="protection.html">Protect & Be Aware</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="case-studies.html">Case Studies</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#"
+                            id="OthersDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Others
+                        </a>
+                        <ul class="dropdown-menu"
+                            aria-labelledby="OthersDropdown">
+                            <li>
+                                <a class="dropdown-item" href="contact.html">Contact Us</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="Register.html">Register</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="login.html">Login</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/checkforgot">Forgot Password</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="/logout" class="btn btn-danger ms-3">Logout</a>
+            </div>
+        </div>
+    </nav>    
+    <br>
+    <br>
+    <div class="container">
+        <h1>MOST WANTED</h1>
+        <h1>Cyber Criminals Board</h1>
+        <div class="board" id="criminalBoard">
+            <div class="row">
+                <!-- Criminal cards will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const criminals = [
+            { name: "Kevin Mitnick", case: "Hacking into major tech companies", details: "Known as 'America's most wanted hacker,' caused significant system disruptions and stole proprietary software." },
+            { name: "Gary McKinnon", case: "Hacking NASA and U.S. DoD systems", details: "Claimed to be searching for evidence of UFOs, caused severe security concerns." },
+            { name: "Albert Gonzalez", case: "Theft of over 170 million credit card numbers", details: "Led to one of the largest cyber theft cases in history." },
+            { name: "Adrian Lamo", case: "Hacking into The New York Times, Microsoft, and Yahoo", details: "Known as the 'homeless hacker,' exposed vulnerabilities in major corporations." },
+            { name: "Jeanson James Ancheta", case: "Operating botnets and using malware", details: "Used a network of compromised computers to spread ads and malicious code." },
+            { name: "Max Ray Butler", case: "Stealing millions of credit card numbers", details: "Responsible for one of the largest credit card data breaches." },
+            { name: "Vladimir Levin", case: "Leading a $10 million bank heist", details: "Manipulated Citibank's computer system to transfer funds illegally." },
+            { name: "Jonathan James", case: "Hacking into NASA's network", details: "First juvenile sentenced for a cybercrime in the U.S." },
+            { name: "Anonymous", case: "Multiple high-profile cyberattacks", details: "Decentralized group responsible for cyber protests and data leaks." },
+            { name: "Matthew Bevan and Richard Pryce", case: "Hacking into military networks", details: "Accessed sensitive military data, raising international concerns." },
+            { name: "Omar Dhanani", case: "Identity theft and selling stolen data", details: "Part of ShadowCrew, involved in international identity theft ring." },
+            { name: "The Lizard Squad", case: "DDoS attacks on gaming platforms", details: "Attacked PlayStation Network, Xbox Live, and other major platforms." }
+        ];
+
+        $(document).ready(function() {
+            const board = $('#criminalBoard .row');
+            criminals.forEach((criminal, index) => {
+                const card = $('<div class="col-md-4 mb-4">')
+                    .append($('<div class="criminal-card">')
+                        .append($('<div class="pin">'))
+                        .append($('<h5 class="criminal-name">').text(criminal.name))
+                        .append($('<p class="case-title">').text(criminal.case))
+                        .append($('<p class="case-details">').text(criminal.details))
+                    );
+                board.append(card);
+            });
+
+            createConnections();
+        });
+
+        function createConnections() {
+            const cards = $('.criminal-card');
+            const boardOffset = $('#criminalBoard').offset();
+
+            for (let i = 0; i < cards.length; i++) {
+                for (let j = i + 1; j < cards.length; j++) {
+                    if (Math.random() < 0.3) {  // 30% chance to create a connection
+                        const start = $(cards[i]);
+                        const end = $(cards[j]);
+                        const startOffset = start.offset();
+                        const endOffset = end.offset();
+
+                        const x1 = startOffset.left + start.width() / 2 - boardOffset.left;
+                        const y1 = startOffset.top + start.height() / 2 - boardOffset.top;
+                        const x2 = endOffset.left + end.width() / 2 - boardOffset.left;
+                        const y2 = endOffset.top + end.height() / 2 - boardOffset.top;
+
+                        const length = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+                        const angle = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI;
+
+                        const midX = (x1 + x2) / 2;
+                        const midY = (y1 + y2) / 2;
+
+                        const curve = $('<div class="connection-line">')
+                            .css({
+                                width: length,
+                                left: x1,
+                                top: y1,
+                                transform: `rotate(${angle}deg)`,
+                            });
+
+                        $('#criminalBoard').append(curve);
+
+                        // Add curve to the line
+                        curve.css({
+                            'transform-origin': '0 50%',
+                            'transform': `rotate(${angle}deg) translateY(${Math.random() * 20 - 10}px)`,
+                        });
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

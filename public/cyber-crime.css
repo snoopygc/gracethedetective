@@ -1,0 +1,109 @@
+/* cyber crime css */
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f7de9e;
+    color: #1c294c;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.navbar {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #1c294c;
+}
+.navbar-brand,
+.nav-link {
+    color: #e9ab0d !important;
+    transition: all 0.3s ease;
+}
+.nav-link:hover,
+.navbar-brand:hover {
+    color: #1c294c !important;
+    background-color: #e9ab0d;
+}
+.nav-item {
+    margin-right: 10px;
+}
+.dropdown-menu {
+    background-color: #1c294c;
+}
+.dropdown-item {
+    color: #e9ab0d;
+}
+.dropdown-item:hover {
+    background-color: #e9ab0d;
+    color: #1c294c;
+}
+.navbar-brand img {
+    height: 40px;
+    margin-right: 10px;
+}
+.crossword-container {
+    background-color: #8b4513;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 30px;
+}
+.crossword-grid {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    gap: 2px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.crossword-cell {
+    aspect-ratio: 1;
+    background-color: #e9ab0d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #1c294c;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+.word-list {
+    background-color: rgba(28, 41, 76, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1.2em;
+}
+.hint-image {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.highlighted {
+    background-color: #ff6b6b;
+}
+.found {
+    text-decoration: line-through;
+    color: #8b4513;
+}
+.crime-info {
+    margin-top: 30px;
+    background-color: rgba(28, 41, 76, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+.media-section {
+    margin-top: 30px;
+}
+.media-item {
+    margin-bottom: 30px;
+    background-color: rgba(28, 41, 76, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+.media-item img,
+.media-item video {
+    max-width: 100%;
+    border-radius: 10px;
+}
+footer {
+    background-color: #1c294c;
+    color: #e9ab0d;
+    padding: 20px 0;
+    margin-top: 30px;
+}

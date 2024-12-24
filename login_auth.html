@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Login</title>
+    <style>
+        @font-face {
+            font-family: 'VT323';
+            src: url('https://fonts.gstatic.com/s/vt323/v17/pxiKyp0ihIEF2isfFJU.woff2') format('woff2');
+        }
+
+        body {
+            font-family: 'VT323', monospace;
+            background-color: #000;
+            color: #0f0;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .login-form {
+            width: 300px;
+            background-color: #111;
+            border: 2px solid #0f0;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            font-family: 'VT323', monospace;
+        }
+
+        .login-form h1 {
+            color: #0f0;
+            font-size: 30px;
+            padding: 20px 0;
+            font-family: 'VT323', monospace;
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #0f0;
+            background-color: #000;
+            color: #0f0;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            font-size: 24px;
+            font-family: 'VT323', monospace;
+        }
+
+        .login-form input[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            background-color: #0f0;
+            border: 0;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            box-sizing: border-box;
+            font-size: 24px;
+            font-family: 'VT323', monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-form">
+        <h1>Login Verification</h1>
+        <form action="/checklogin" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+        <br>
+        <a href="/checkforgot" style="color: #0f0; text-decoration: none;">Forgot Password?</a>
+    </div>
+</body>
+
+</html>
