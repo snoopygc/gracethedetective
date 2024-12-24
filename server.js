@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const mysql = require('mysql2');
 const nodemailer = require('nodemailer');
 const smtpTransport = require('nodemailer-smtp-transport');
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcrypt');
 const app = express();
 const port = 3500;
 
@@ -52,16 +52,16 @@ const isAuthenticated = (req, res, next) => {
     }
 };
 
-// Apply authentication middleware BEFORE static file serving
-app.use((req, res, next) => {
-    if (req.path !== '/login' &&
-        req.path !== '/login.html' &&
-        !req.path.match(/\.(css|js|jpg|png|gif|ico)$/)) {
-        isAuthenticated(req, res, next);
-    } else {
-        next();
-    }
-});
+// // Apply authentication middleware BEFORE static file serving
+// app.use((req, res, next) => {
+//     if (req.path !== '/login' &&
+//         req.path !== '/login.html' &&
+//         !req.path.match(/\.(css|js|jpg|png|gif|ico)$/)) {
+//         isAuthenticated(req, res, next);
+//     } else {
+//         next();
+//     }
+// });
 
 // Static files
 app.use(express.static(path.join(__dirname, 'public')));
