@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const mysql = require('mysql2');
 const nodemailer = require('nodemailer');
 const smtpTransport = require('nodemailer-smtp-transport');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const app = express();
 const port = 3500;
 
